@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRAMMAR TEST</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="bootstrap-4.6.2-dist/css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="box" id="questionScreen">
+      <div class="title justify-content-between d-flex">
+        <h2>Placement Test - Simple present</h2>
+        <p id="nQuestion" class="btn btn-sm btn-light my-auto"></p>
+      </div>
+
+      <div class="header">
+        <div class="scoreBox">Score :0<span></span></div>
+        <div class="timerBox">Time Left :<span></span></div>
+      </div>
+
+      <div class="questionBox">
+        1.Many teachers always ____________ much homework.
+      </div>
+
+      <div class="optionBox">
+        <span id="span1" onclick="checkAnswer(this)" data-opt="1"></span>
+        <span id="span2" onclick="checkAnswer(this)" data-opt="2"></span>
+        <span id="span3" onclick="checkAnswer(this)" data-opt="3"></span>
+        <span id="span4" onclick="checkAnswer(this)" data-opt="4"></span>
+      </div>
+      <div class="optionIsian input-group py-3">
+        <input
+          id="jawabanIsian"
+          type="text"
+          class="form-control"
+          placeholder="Your Answer"
+          aria-label="Your Answer"
+          autofocus
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-light"
+            onclick="checkAnswerIsian()"
+            id="checkButton"
+            type="button"
+          >
+            Check
+          </button>
+        </div>
+      </div>
+      <div id="alert" class="alert alert-warning d-none">
+        Please insert your Answer before check !
+      </div>
+
+      <div class="question"></div>
+
+      <div class="footer">
+        <button onclick="showNext()">Next</button>
+        <button onclick="showResult(1)">Show Result</button>
+      </div>
+    </div>
+
+    <div class="box" id="resultScreen" style="display: none">
+      <div class="title">Your Result</div>
+      <div class="resultBox">
+        <label class="text-white">Questions:</label>
+        <span class="text-white" id="totalQuestion">25</span>
+        <label class="text-white">Attempt :</label>
+        <span class="text-white" id="attemptQuestion">0</span>
+        <label class="text-white">Correct :</label>
+        <span class="text-white" id="correctAnswer">0</span>
+        <label class="text-white">Wrong :</label>
+        <span class="text-white" id="wrongAnswer">0</span>
+      </div>
+
+      <div class="buttonBox">
+        <a href="form/Form.html">Submit Score</a>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/script.js"></script>
+</html>
